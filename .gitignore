@@ -1,0 +1,49 @@
+# ============================================================
+# GuitarLoop .gitignore
+# ============================================================
+
+# --- File spesifik yang TIDAK BOLEH ikut commit ke Git ---
+PRD.md                      # <==== INTI PERMINTAAN: PRD.md di-skip Git
+
+# --- Build artifacts Rust (WAJIB ADA, default semua Rust project) ---
+/target/
+**/*.rs.bk
+Cargo.lock.bak
+rustc-debug.log
+
+# --- Database lokal (SQLite GuitarLoop) — jangan di-commit ---
+guitarloop.db
+guitarloop.db-shm
+guitarloop.db-wal
+data/guitarloop.db*
+
+# --- OS-specific junk files ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# --- Editor / IDE ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# --- Logs & debug files ---
+*.log
+logs/
+debug/
+crash-reports/
+
+# --- Local config (environment variables dll) ---
+.env
+.env.local
+.env.*.local
